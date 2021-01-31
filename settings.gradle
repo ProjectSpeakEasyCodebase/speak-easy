@@ -1,0 +1,4 @@
+rootProject.name = 'speak-easy'
+include 'client'
+include 'server-fragment'
+

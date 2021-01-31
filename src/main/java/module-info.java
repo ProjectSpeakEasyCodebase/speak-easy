@@ -1,0 +1,2 @@
+module speak.easy.main {
+}
