@@ -29,6 +29,7 @@ public class UserChannel implements Channel {
 
     @Override
     public void publish(Message<? extends MessageContent> message, User receiver, KeyChain keyChain) {
+        message.setTimeSent();
         keyChain.sign(message);
         keyChain.encryptTo(receiver, message);
         keyChain.encrypt(this, message);

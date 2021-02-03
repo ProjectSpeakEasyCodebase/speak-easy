@@ -11,28 +11,17 @@ class ReactionTest {
 
     @BeforeEach
     void setUp() {
-        reaction = new Reaction("", null);
+        reaction = new Reaction("test", null);
     }
 
     @Test
     void getContent() {
-
-    }
-
-    @Test
-    void escape() {
-    }
-
-    @Test
-    void unescape() {
-    }
-
-    @Test
-    void setContent() {
+        assertEquals("test", reaction.getContent());
     }
 
     @Test
     void getSourceMessage() {
+        assertNull(reaction.getSourceMessage());
     }
 
     @Test
@@ -41,22 +30,7 @@ class ReactionTest {
     }
 
     @Test
-    void serialize() {
+    void serializeAndDeserialize() {
     }
 
-    @Test
-    void deserialize() {
-    }
-
-    @Test
-    void testGetType() {
-    }
-
-    @Test
-    void testSerialize() {
-    }
-
-    @Test
-    void testDeserialize() {
-    }
 }

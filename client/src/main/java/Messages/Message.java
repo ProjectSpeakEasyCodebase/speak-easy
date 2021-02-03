@@ -22,6 +22,7 @@ public class Message<T extends MessageType>{
     private boolean channelEncrypted;
     private final List<MessageEvent> messageEventList;
     private final String msgId;
+    public long timeSent;
 
     public Message(User sender, List<User> receiver, T messageContent, Channel channel) {
         this.sender = sender;
@@ -102,6 +103,10 @@ public class Message<T extends MessageType>{
 
     public void log(MessageEvent messageEvent) {
         messageEventList.add(messageEvent);
+    }
+
+    public void setTimeSent(){
+        timeSent = System.currentTimeMillis();
     }
 
     @Override

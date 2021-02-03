@@ -1,61 +1,18 @@
 package Messages;
 
+import Messages.Types.Text;
+import Users.ClientUser;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MessageTest {
 
+    private ClientUser user;
+    private Message<Text> message;
+
     @BeforeEach
     void setUp() {
+        user = new ClientUser("name", null);
+        message = new Message<>(user, new Text("test"),  null);
     }
 
-    @Test
-    void isSigned() {
-    }
-
-    @Test
-    void isVerified() {
-    }
-
-    @Test
-    void setSigned() {
-    }
-
-    @Test
-    void setVerified() {
-    }
-
-    @Test
-    void isEncrypted() {
-    }
-
-    @Test
-    void isChannelEncrypted() {
-    }
-
-    @Test
-    void setChannelEncrypted() {
-    }
-
-    @Test
-    void getSender() {
-    }
-
-    @Test
-    void getReceivers() {
-    }
-
-    @Test
-    void getMessageContent() {
-    }
-
-    @Test
-    void setMessageContent() {
-    }
-
-    @Test
-    void getPrivateEncrypted() {
-    }
 }

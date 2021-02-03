@@ -1,5 +1,6 @@
 package Messages.Types;
 
+import Messages.Message;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,7 @@ class TextTest {
     private Text text;
 
     @Test
-    void serialize() {
+    void serializeAndDeserialize() {
     }
 
     @Test
