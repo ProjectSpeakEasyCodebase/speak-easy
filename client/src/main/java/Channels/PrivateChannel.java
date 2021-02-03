@@ -26,6 +26,7 @@ public class PrivateChannel implements Channel{
 
     @Override
     public void publish(Message<? extends MessageContent> message, User receiver, KeyChain keyChain) {
+        message.setTimeSent();
         keyChain.sign(message);
         keyChain.encrypt(this, message);
         client.produce(channelId, message);

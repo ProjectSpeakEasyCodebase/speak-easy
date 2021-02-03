@@ -5,7 +5,7 @@ import com.jsoniter.output.JsonStream;
 
 public class Text extends MessageContent  implements Replyable {
 
-    Text(String msg) {
+    public Text(String msg) {
         super(msg);
     }
 

@@ -23,8 +23,9 @@ public class OpenChannel implements  Channel {
     @Override
     public void publish(Message<? extends MessageContent> message, User receiver, KeyChain keyChain) throws IllegalAccessException {
         if (message.getMessageContent().getType() == Type.INVITATION) {
-            throw new IllegalAccessException("Cannot Invite to private channel over and open Channel");
+            throw new IllegalAccessException("Cannot Invite to private channel over an open Channel");
         }
+        message.setTimeSent();
         client.produce(channelId, message);
     }
 
